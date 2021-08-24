@@ -27,7 +27,7 @@ class Klasifikasi extends BaseController
 			'nama_klasifikasi' => $this->request->getPost('nama_klasifikasi'),
 		);
 			
-		$this->Model_klasifikasi->add();
+		$this->Model_klasifikasi->add($data);
 		session()->setFlashdata('pesan','Data Berhasil Ditambahkan');
 		return redirect()->to(base_url('klasifikasi'));
 		

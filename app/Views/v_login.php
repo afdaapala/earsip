@@ -17,7 +17,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href=" <?= base_url() ?>/template/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" id="bg-ani">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-success">
@@ -106,6 +106,21 @@
   </div>
   <!-- /.card -->
 </div>
+
+<script src="<?= base_url() ?>/assets/js/three.min.js"></script>
+<script src="<?= base_url() ?>/assets/js/vanta.clouds.min.js"></script>
+<script>
+VANTA.CLOUDS({
+  el: "#bg-ani",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  speed: 0.50
+})
+</script>
+
 <!-- /.login-box -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>

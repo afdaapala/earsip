@@ -8,7 +8,9 @@ class Model_klasifikasi extends Model
 {
     public function all_data()
     {
-        return $this->db->table('tabel_klasifikasi')->get()->getResultArray();
+        return $this->db->table('tabel_klasifikasi')
+        ->orderBy('id_klasifikasi')
+        ->get()->getResultArray();
     }
 
     public function add($data)
