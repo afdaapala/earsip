@@ -44,6 +44,7 @@ class Filters extends BaseConfig
 			'Filter_auth' => ['except' => [
 				'home', 'home/*',
 				'klasifikasi', 'klasifikasi/*',
+				'unit', 'unit/*',
 				]],
 		],
 	];

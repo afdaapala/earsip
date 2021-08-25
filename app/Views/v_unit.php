@@ -2,7 +2,7 @@
 <div class="col-md">
             <div class="card card-outline card-success">
               <div class="card-header">
-                <h3 class="card-title">Daftar Klasifikasi</h3>
+                <h3 class="card-title">Daftar Unit</h3>
 
                 <div class="card-tools">
                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#add">
@@ -37,31 +37,27 @@
                 <table id="table1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th> 
+                      <th width="10px"> 
                         No
                       </th>
                       <th>
-                        Kode
+                        Nama Unit 
                       </th>
-                      <th>
-                        Nama Klasifikasi 
-                      </th>
-                      <th>
+                      <th width="40px">
                         Opsi
                       </th>
                       
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $no = 1; foreach ($klasifikasi as $key => $value) { ?>
+                    <?php $no = 1; foreach ($unit as $key => $value) { ?>
                       <tr>
                         <td> <?= $no++; ?> </td>
-                        <td> <?= $value['kode_klasifikasi']++; ?></td>
-                        <td> <?= $value['nama_klasifikasi']++; ?></td>
+                        <td> <?= $value['nama_unit']++; ?></td>
                         <td> 
-                          <button class="btn btn-info btn-xs" title="Ubah Data" data-toggle="modal" data-target="#edit<?= $value['id_klasifikasi']; ?>"> <i class="fas fa-edit"></i> </button>
+                          <button class="btn btn-info btn-xs" title="Ubah Data" data-toggle="modal" data-target="#edit<?= $value['id_unit']; ?>"> <i class="fas fa-edit"></i> </button>
                         
-                          <button class="btn btn-danger btn-xs" title="Hapus Data" data-toggle="modal" data-target="#remove<?= $value['id_klasifikasi']; ?>"><i class="fas fa-times"></i></button>
+                          <button class="btn btn-danger btn-xs" title="Hapus Data" data-toggle="modal" data-target="#remove<?= $value['id_unit']; ?>"><i class="fas fa-times"></i></button>
                         </td>
                       </tr>
                     <?php } ?>
@@ -78,7 +74,7 @@
 </div>
 
 
-<!-- Modal Klasifikasi -->
+<!-- Modal UNIT -->
 <div class="modal fade" id="add">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -89,17 +85,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <?php echo form_open('klasifikasi/add') ?>
+              <?php echo form_open('unit/add') ?>
                              <!-- form start -->
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Kode Klasifikasi</label>
-                    <input name="kode_klasifikasi" class="form-control" placeholder="Kode" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label>Nama Klasifikasi</label>
-                    <input name="nama_klasifikasi" class="form-control" placeholder="Nama Klasifikasi" required>
+                    <div class="form-group">
+                    <label>Nama Unit</label>
+                    <input name="nama_unit" class="form-control" placeholder="Nama Unit" required>
                   </div>
                   <!-- <div class="form-group">
                     <label for="exampleInputFile">File input</label>
@@ -118,12 +108,12 @@
                 <!-- <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div> -->     
-            </div>
+            
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
               <button type="submit" class="btn btn-success">Tambah</button>
             </div>
-            </form>
+            </div>
               <?php echo form_close() ?>
           </div>
           <!-- /.modal-content -->
@@ -133,9 +123,9 @@
       <!-- /.modal -->
 
 
-<!-- Modal EDIT Klasifikasi -->
-<?php foreach ($klasifikasi as $key => $value) { ?>
-<div class="modal fade" id="edit<?= $value['id_klasifikasi']; ?>">
+<!-- Modal EDIT UNIT -->
+<?php foreach ($unit as $key => $value) { ?>
+<div class="modal fade" id="edit<?= $value['id_unit']; ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-info">
@@ -145,26 +135,20 @@
               </button>
             </div>
             <div class="modal-body">
-              <?php echo form_open('klasifikasi/edit/' . $value['id_klasifikasi']) ?>
+              <?php echo form_open('unit/edit/' . $value['id_unit']) ?>
                              <!-- form start -->
-              
-                <div class="card-body">
                   <div class="form-group">
-                    <label>Kode Klasifikasi</label>
-                    <input name="kode_klasifikasi" class="form-control" value="<?= $value['kode_klasifikasi']; ?>" required>
+                    <label>Nama Unit</label>
+                    <input name="nama_unit" class="form-control" value="<?= $value['nama_unit']; ?>" required>
                   </div>
-
-                  <div class="form-group">
-                    <label>Nama Klasifikasi</label>
-                    <input name="nama_klasifikasi" class="form-control" value="<?= $value['nama_klasifikasi']; ?>" required>
-                  </div>
-                </div>
             </div>
-            <div class="modal-footer justify-content-between">
+          
+          <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
               <button type="submit" class="btn btn-info">Ubah</button>
-            </div>
-            </form>
+          </div>
+          </div>
+            
               <?php echo form_close() ?>
           </div>
           <!-- /.modal-content -->
@@ -174,8 +158,8 @@
 <?php } ?>
       <!-- /.modal -->
 
-<?php foreach ($klasifikasi as $key => $value) { ?>
-<div class="modal fade" id="remove<?= $value['id_klasifikasi']; ?>">
+<?php foreach ($unit as $key => $value) { ?>
+<div class="modal fade" id="remove<?= $value['id_unit']; ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-danger">
@@ -185,11 +169,12 @@
               </button>
             </div>
             <div class="modal-body">
-              Yakin Menghapus <b> <?= $value['kode_klasifikasi']; ?> </b> ?
-            </div>
+              Yakin Menghapus Unit : <b> <?= $value['nama_unit']; ?> </b> ?
+            
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-              <a href="<?= base_url('klasifikasi/remove/' . $value['id_klasifikasi']) ?>" type="submit" class="btn btn-danger">Hapus</a>
+              <a href="<?= base_url('unit/remove/' . $value['id_unit']) ?>" type="submit" class="btn btn-danger">Hapus</a>
+            </div>
             </div>
             
               

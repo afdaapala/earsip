@@ -18,15 +18,15 @@
   <link rel="stylesheet" href=" <?= base_url() ?>/template/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" id="bg-ani">
-<div class="login-box">
+<div class="login-box .opacity-2">
   <!-- /.login-logo -->
-  <div class="card card-outline card-success">
+  <div class="card card-outline card-success .opacity-2">
     <div class="card-header text-center">
         <img src=" <?= base_url() ?>/assets/logo/bmkg.png" alt="Logo BMKG" class="brand-image" style="">
         <a href=" <?= base_url() ?> " class="h4"><b>SISIP |</b> Sistem Digitalisasi Arsip</a>
         <a href=" <?= base_url() ?> " class="h4"><b>STAMAR KENDARI </b></a>
     </div>
-    <div class="card-body">
+    <div class="card-body .opacity-2">
          <!-- <p class="login-box-msg">.::. SISTEM DIGITALISASI ARSIP .::.</p> -->
       <p class="login-box-msg">Login untuk memulai</p>
         
@@ -109,6 +109,8 @@
 
 <script src="<?= base_url() ?>/assets/js/three.min.js"></script>
 <script src="<?= base_url() ?>/assets/js/vanta.clouds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
 <script>
 VANTA.CLOUDS({
   el: "#bg-ani",
@@ -118,6 +120,19 @@ VANTA.CLOUDS({
   minHeight: 200.00,
   minWidth: 200.00,
   speed: 0.50
+})
+</script>
+
+<script>
+VANTA.BIRDS({
+  el: "#bg-bird",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
 })
 </script>
 
