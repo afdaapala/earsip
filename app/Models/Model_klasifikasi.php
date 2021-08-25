@@ -17,4 +17,12 @@ class Model_klasifikasi extends Model
     {
     	return $this->db->table('tabel_klasifikasi')->insert($data);
     }
+
+    public function edit($data){
+        $this->db->table('tabel_klasifikasi')->where('id_klasifikasi',$data['id_klasifikasi'])->update($data);
+    }
+    public function remove($data){
+        $this->db->table('tabel_klasifikasi')->where('id_klasifikasi',$data['id_klasifikasi'])->delete($data);
+    }
+
 }

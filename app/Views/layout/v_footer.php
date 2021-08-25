@@ -81,7 +81,7 @@
     $("#table1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#table1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": true,
@@ -99,7 +99,7 @@
     $('.alert').fadeTo(500, 0).slideUp(500, function(){
       $(this).remove();
     });
-  }, 2000);
+  }, 2500);
 </script>
 
 </body>

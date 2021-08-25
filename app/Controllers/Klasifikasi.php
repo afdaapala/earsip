@@ -33,4 +33,27 @@ class Klasifikasi extends BaseController
 		
 
 	}
+	public function edit($id_klasifikasi)
+	{
+		$data = array(
+			'id_klasifikasi' => $id_klasifikasi,
+			'kode_klasifikasi' => $this->request->getPost('kode_klasifikasi'),
+			'nama_klasifikasi' => $this->request->getPost('nama_klasifikasi'),
+		);
+			
+		$this->Model_klasifikasi->edit($data);
+		session()->setFlashdata('pesan','Data Berhasil Diubah');
+		return redirect()->to(base_url('klasifikasi'));
+	}
+
+	public function remove($id_klasifikasi)
+	{
+		$data = array(
+			'id_klasifikasi' => $id_klasifikasi,
+		);
+			
+		$this->Model_klasifikasi->remove($data);
+		session()->setFlashdata('pesan','Data Terhapus');
+		return redirect()->to(base_url('klasifikasi'));
+	}
 }
