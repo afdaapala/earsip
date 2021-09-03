@@ -8,7 +8,7 @@
                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#add">
                     <i class="fas fa-plus">Tambah</i>
                   </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?= base_url('kategori') ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?= base_url('unit') ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
                     <i class="fas fa-sync-alt"></i>
                   </button>
                   <button type="button" class="btn btn-tool" data-card-widget="maximize">

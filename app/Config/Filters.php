@@ -45,6 +45,7 @@ class Filters extends BaseConfig
 				'home', 'home/*',
 				'klasifikasi', 'klasifikasi/*',
 				'unit', 'unit/*',
+				'user', 'user/*',
 				]],
 		],
 	];

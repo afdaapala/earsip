@@ -34,6 +34,13 @@
 
       <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" data-toggle="" href="<?= base_url('user') ?>">
+            <i class="far fa-user"></i>
+            <span class="badge badge-success navbar-badge">User</span>
+          </a>
+          
+        </li>
         <!-- Messages Dropdown Menu -->
         <!-- <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
@@ -94,9 +101,9 @@
           </div>
         </li> -->
         <!-- Notifications Dropdown Menu -->
-       <!--  <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-bell"></i>
+            <i class="far fa-user"></i>
             <span class="badge badge-warning navbar-badge">15</span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
