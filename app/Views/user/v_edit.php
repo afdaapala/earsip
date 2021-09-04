@@ -3,7 +3,7 @@
 <div class="col-md">
             <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">Tambah User Baru</h3>
+                <h3 class="card-title">Ubah Data User </h3>
 
                 <div class="card-tools">
                   

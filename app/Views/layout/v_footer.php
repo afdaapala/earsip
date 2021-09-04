@@ -26,6 +26,10 @@
 <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url() ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url() ?>/assets/js/select2.js"></script>
+
+<script src="<?= base_url() ?>/assets/js/moment.min.js"></script>
+<script src="<?= base_url() ?>/assets/js/bootstrap-datepicker.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="<?= base_url() ?>/template/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -44,6 +48,26 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url() ?>/template/dist/js/demo.js"></script>
 <!-- Page specific script -->
+<script>
+   $(function () {
+
+    // INITIALIZE DATEPICKER PLUGIN
+    $('.datepicker').datepicker({
+        clearBtn: true,
+        format: "mm/dd/yyyy"
+    });
+
+
+    // FOR DEMO PURPOSE
+    $('#reservationDate').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+});
+</script>
+
+
+
 <script>
   $('.swalDefaultSuccess').click(function() {
       Toast.fire({
@@ -99,7 +123,13 @@
     $('.alert').fadeTo(500, 0).slideUp(500, function(){
       $(this).remove();
     });
-  }, 2500);
+  }, 3500);
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.select2-basic').select2();
+});
 </script>
 
 </body>

@@ -19,6 +19,13 @@
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>/template/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/assets/css/select2.css">
+  <!-- <link rel="stylesheet" href="<?= base_url() ?>/assets/css/tempusdominus-bootstrap-4.min.css"> -->
+  <link rel="stylesheet" href="<?= base_url() ?>/assets/css/bootstrap-datepicker.css">
   <script language="JavaScript" src="http://time.bmkg.go.id/JamServer.php"></script>
-  
+  <style type="text/css">
+    body, html {
+  height: 100%
+}
+
 </head>

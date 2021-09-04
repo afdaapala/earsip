@@ -46,6 +46,7 @@ class Filters extends BaseConfig
 				'klasifikasi', 'klasifikasi/*',
 				'unit', 'unit/*',
 				'user', 'user/*',
+				'arsip','arsip/*',
 				]],
 		],
 	];

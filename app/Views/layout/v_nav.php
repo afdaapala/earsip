@@ -3,16 +3,16 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="<?= base_url('home') ?>" class="nav-link">Beranda</a>
+            <a href="<?= base_url('home') ?>" class="nav-link"> <i class="fa fa-home"></i> Beranda</a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('klasifikasi') ?>" class="nav-link">Klasifikasi</a>
+            <a href="<?= base_url('arsip') ?>" class="nav-link"><i class="fa fa-archive"></i> Arsip</a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('unit') ?>" class="nav-link">Unit</a>
+            <a href="<?= base_url('klasifikasi') ?>" class="nav-link"><i class="fa fa-file-alt"></i> Klasifikasi</a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('klasifikasi') ?>" class="nav-link">Arsip</a>
+            <a href="<?= base_url('unit') ?>" class="nav-link"><i class="fa fa-address-card"></i> Unit</a>
           </li>
 
             </ul>
@@ -130,7 +130,15 @@
         <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <img src="<?= base_url('assets/' . session()->get('foto')) ?>" class="user-image img-circle elevation-2" alt="User Image">
-          <span class="d-none d-md-inline">Admin Stamar KDI</span>
+          <span class="d-none d-md-inline">
+            <?= session()->get('nama_user') ?>
+            -
+            <?php if (session()->get('level') == 1) {
+                echo 'Admin';
+            } else{
+                echo 'User';
+            } ?>
+          </span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->

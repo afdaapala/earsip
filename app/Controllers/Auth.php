@@ -48,6 +48,8 @@ class Auth extends BaseController
                 session()->set('email', $cek['email']);
                 session()->set('level', $cek['level']);
                 session()->set('foto', $cek['foto']);
+                session()->set('id_unit', $cek['id_unit']);
+                session()->set('id_user', $cek['id_user']);
                 return redirect()->to(base_url('Home'));                
             } else{
                 session()->setFlashdata('pesan', 'Login Gagal, Email/Password tidak ditemukan');
